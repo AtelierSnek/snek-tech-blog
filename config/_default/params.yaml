@@ -5,14 +5,13 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://nunocoracao.github.io/blowfish/docs/configuration/#theme-parameters
 
-colorScheme: Princess
+colorScheme: congo
 defaultAppearance: dark # valid options: light or dark
 
 mainSections:
   - section1
   - section2
 robots: ''
-
 
 autoSwitchAppearance: true
 enableSearch: true
