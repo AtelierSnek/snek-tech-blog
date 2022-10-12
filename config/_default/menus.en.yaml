@@ -27,8 +27,8 @@ main:
 # the copyright notice. Configure as per the main menu above.
 
 footer:
-  - name: Tags
-    pageRef: tags
+  - name: Source Code
+    url: "https://github.com/AtelierSnek/snek-tech-blog"
     weight: 10
   - name: Categories
     pageRef: categories

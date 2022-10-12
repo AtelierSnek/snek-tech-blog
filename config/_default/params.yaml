@@ -36,7 +36,7 @@ article:
   showAuthor: true
   showBreadcrumbs: true
   showDraftLabel: true
-  showEdit: true
+  showEdit: false
   # showViews: true
   # showLikes: true
   editAppendPath: true
@@ -50,14 +50,7 @@ article:
   showTaxonomies: false
   showWordCount: true
   showSummary: true
-  sharingLinks:
-    - linkedin
-    - twitter
-    - whatsapp
-    - pinterest
-    - reddit
-    - facebook
-    - email
+  sharingLinks: false
 list:
   showBreadcrumbs: false
   showSummary: false

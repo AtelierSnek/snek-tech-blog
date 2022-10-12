@@ -16,7 +16,7 @@ author:
   name: "Rin"
   image: "img/blowfish_logo.png"
   headline: "As in 凛冽时雨"
-  bio: "A little bit about you"
+  bio: "System that mostly works on TCP/IP networks and automation, but loves FP and Category Theory"
   links:
   # - email: 'mailto:hello@your_domain.com'
   # - link: 'https://link-to-some-website.com/'
