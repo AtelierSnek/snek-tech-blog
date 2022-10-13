@@ -1,0 +1,51 @@
+.prose {
+  --tw-prose-code: rgba(var(--color-secondary-600),1);
+  --tw-prose-invert-code: rgba(var(--color-secondary-400),1);
+}
+/*
+.dark .prose .chroma {
+  background-color: rgba(var(--color-neutral-800),var(--tw-bg-opacity));
+}
+/* color 1 for code blocks */
+.dark .chroma .kt, .dark .chroma .nv, .dark .chroma .vi, .dark .chroma .vm, .dark .chroma .m, .dark .chroma .mb,
+.dark .chroma .mf, .dark .chroma .mh, .dark .chroma .mi, .dark .chroma .il, .dark .chroma .mo {
+  color: rgba(var(--color-secondary-400),var(--tw-text-opacity));
+}
+
+.chroma .kt, .chroma .nv, .chroma .vi, .chroma .vm, .chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi,
+.chroma .il, .chroma .mo {
+    color: rgba(var(--color-secondary-600),var(--tw-text-opacity));
+}
+/* color 2 for code blocks */
+.dark .chroma .na, .dark .chroma .nb, .dark .chroma .bp, .dark .chroma .nx, .dark .chroma .py, .dark .chroma .nt {
+  color: rgba(var(--color-secondary-300),var(--tw-text-opacity));
+}
+
+/* color 3 for code blocks */
+.chroma .l, .chroma .ld, .chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .sh, .chroma .si, .chroma .sx, .chroma .s1, .chroma .gi, .chroma .go, .chroma .gp {
+    color: rgba(var(--color-primary-700),var(--tw-text-opacity));
+}
+
+.dark .chroma .ow {
+    color: rgba(var(--color-primary-400),var(--tw-text-opacity));
+}
+
+.chroma .ow {
+    color: rgba(var(--color-primary-600),var(--tw-text-opacity));
+}
+
+.chroma .se {
+    color: rgba(var(--color-secondary-600),var(--tw-text-opacity));
+}
+
+.dark .dark\:bg-neutral-800 {
+  background-color: rgba(var(--color-neutral-900),var(--tw-bg-opacity));
+}
+
+.bg-neutral {
+  background-color: rgba(var(--color-neutral-50),var(--tw-bg-opacity));
+}
+
+.prose .chroma {
+  background-color: rgba(var(--color-neutral-100),var(--tw-bg-opacity));
+}

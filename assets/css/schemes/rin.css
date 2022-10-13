@@ -1,0 +1,37 @@
+/* Blowfish scheme */
+:root {
+  --color-neutral: 251, 254, 254;
+  /* BlueGrey */
+  --color-neutral-50: 248, 247, 250;  /* f8f7fa */
+  --color-neutral-100: 237, 238, 241; /* edeef1 */
+  --color-neutral-200: 217, 219, 226; /* d9dbe2 */
+  --color-neutral-300: 181, 184, 194; /* b5b8c2 */
+  --color-neutral-400: 138, 146, 158; /* 8a929e */
+  --color-neutral-500: 110, 113, 125; /* 6e717d */
+  --color-neutral-600: 90, 86, 97;    /* 5a5661 */
+  --color-neutral-700: 70, 65, 75;    /* 46414b */
+  --color-neutral-800: 49, 45, 53;    /* 312d35 */
+  --color-neutral-900: 31, 29, 34;    /* 1f1d22 */
+  /* Violet */
+  --color-primary-50: 245, 243, 255;
+  --color-primary-100: 237, 233, 254;
+  --color-primary-200: 221, 214, 254;
+  --color-primary-300: 196, 181, 253;
+  --color-primary-400: 167, 139, 250;
+  --color-primary-500: 139, 92, 246;
+  --color-primary-600: 124, 58, 237;
+  --color-primary-700: 109, 40, 217;
+  --color-primary-800: 91, 33, 182;
+  --color-primary-900: 76, 29, 149;
+  /* Cerise */
+  --color-secondary-50: 253, 252, 250;  /* fdfcfa */
+  --color-secondary-100: 251, 240, 238; /* fbf0ee */
+  --color-secondary-200: 247, 207, 220; /* f7cfdc */
+  --color-secondary-300: 236, 163, 185; /* eca3b9 */
+  --color-secondary-400: 232, 115, 145; /* e87391 */
+  --color-secondary-500: 219, 79, 112;  /* db4f70 */
+  --color-secondary-600: 195, 53, 81;   /* c33551 */
+  --color-secondary-700: 155, 40, 59;   /* 9b283b */
+  --color-secondary-800: 112, 28, 39;   /* 701c27 */
+  --color-secondary-900: 68, 18, 21;    /* 441215 */
+}
