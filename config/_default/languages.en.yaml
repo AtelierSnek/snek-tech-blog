@@ -8,17 +8,18 @@ rtl: false
 title: "Rin"
 # logo = "img/logo.png"
 description: "As in 凛冽时雨"
-copyright: "Copyright 2022 Rin (Tamara Vassileva) - All opinions herein are our own and not those of our employers"
+copyright: "Copyright 2022 Rin (Tamara Vassileva) <br /> All opinions herein are our own 
+and not those of employers past, present, or potential."
 
-dateFormat: "2 January 2006"
+dateFormat: "Mon Jan 2 2006"
 
 author:
   name: "Rin"
   image: "img/blowfish_logo.png"
   headline: "As in 凛冽时雨"
-  bio: "System that mostly works on TCP/IP networks and automation, but loves FP and Category Theory"
+  bio: "System that mostly works on TCP/IP networks and automation,<br />but loves FP and Category Theory"
   links:
-  # - email: 'mailto:hello@your_domain.com'
+  - email: 'mailto:rin@rin.systems'
   # - link: 'https://link-to-some-website.com/'
   # - amazon: 'https://www.amazon.com/hz/wishlist/ls/wishlist-id'
   # - apple: 'https://www.apple.com'
@@ -56,6 +57,6 @@ author:
   # - tiktok: 'https://tiktok.com/@username'
   # - tumblr: 'https://username.tumblr.com'
   # - twitch: 'https://twitch.tv/username'
-  # - twitter: 'https://twitter.com/username'
+  - twitter: 'https://twitter.com/diserasta'
   # - whatsapp: 'https://wa.me/phone-number'
   # - youtube: 'https://youtube.com/username'
