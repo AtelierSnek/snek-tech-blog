@@ -62,10 +62,11 @@ XDG_RUNTIME_DIR=/tmp/1000-runtime-dir
 With that done, we can move onto our next steps.
 
 ### Sysctl
-There's some sysctl config required for older distros, but it's not required on Alpine, so on we go.
+There's some sysctl config required for older distros, but this isn't required for Alpine.
 
 ### User Namespace Configuration
-Rootless Containers use User Namespaces, subUIDs, and subGIDs, so we'll need to have those working. The apk package `shadow-subids` provides that functionality for us.
+Rootless Containers use User Namespaces, subUIDs, and subGIDs, so we'll need to have those working. 
+The apk package `shadow-subids` provides that functionality for us.
 ```
 ~ ❯ apk info shadow-subids
 shadow-subids-4.10-r3 description:
@@ -110,23 +111,39 @@ To enable CGroups in general, we need to set `rc_controller_cgroups` to `YES`
 # /sys/fs/cgroup in hybrid or legacy mode.
 rc_controller_cgroups="YES"
 ```
-From here, we can enable CGroups V2 by setting `rc_cgroup_mode` to `hybrid`
+From here, we can enable CGroups V2 by setting `rc_cgroup_mode` to `unified`
 ```sh
 # This sets the mode used to mount cgroups.
 # "hybrid" mounts cgroups version 2 on /sys/fs/cgroup/unified and
 # cgroups version 1 on /sys/fs/cgroup.
 # "legacy" mounts cgroups version 1 on /sys/fs/cgroup
 # "unified" mounts cgroups version 2 on /sys/fs/cgroup
-rc_cgroup_mode="hybrid"
+rc_cgroup_mode="unified"
 ```
-And configure the particular controllers we want to use:
+
+**(Doll)**: Doll confused.
+
+**(Ashe)** So was I, for a bit. Despite what `rc.conf` says, cgroups V2 does *not* seem to be enabled on Alpine 
+unless `rc_cgroup_mode` is set to `unified`. The [https://wiki.alpinelinux.org/wiki/OpenRC#cgroups\_v2](Alpine Wiki)
+seems to agree here, but isn't super clear. We'll find out if this is sufficient.
+
+
+Next step is configuring the controllers we want to use:
 ```sh
 # This is a list of controllers which should be enabled for cgroups version 2
 # when hybrid mode is being used.
 # Controllers listed here will not be available for cgroups version 1.
 rc_cgroup_controllers="cpuset cpu io memory hugetlb pids"
 ```
-Now we just reboot and we're ready to go!
+Finally, we can add cgroups to a runlevel so that it's started automatically at boot:
+```sh
+rc-update add cgroups
+```
+From here, we can reboot, and continue on. If you don't want to reboot, you can start the cgroup service manually:
+```sh
+rc-service cgroups start
+```
+
 
 ## Configuring the Rootless containerd service
 We'll be using nerdctl as our containerd controller of choice. It comes with a rootless containerd.service, but since Alpine doesn't use systemd, we'll have to adapt this into an rc service.
