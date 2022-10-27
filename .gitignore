@@ -14,3 +14,7 @@ hugo.linux
 
 #VS Code files
 /.vscode
+
+#Ignore Obsidian
+/.obsidian
+*/.obsidian
