@@ -59,7 +59,7 @@ This would normally be something to consider carefully, but a good friend was ge
 that came with the case.
 
 ### The PSU
-We have a spare 850W 80+ Gold PSU lying around the house from an old PC, so we'll just repurpose that here.
+We have a spare 750W Silverstone 80+ Platinum PSU lying around the house from an old PC, so we'll just repurpose that here.
 
 ### The Storage
 It's probably strange to start with the storage, but we'll need to know how much storage we have to spec out
@@ -123,21 +123,25 @@ prohibitively expensive to put it lightly.
 Again, balancing cost and performance, 2 ✕ 500GB Seagate FireCuda 530s does the job well. Relatively high endurance,
 good random IO performance, and not too expensive. Two of these sets us back 600 AUD.
 
+#### Final Storage Configuration
+Our final storage array consists of 12 ✕ 16 TB Seagate Exos Drives, and 2 ✕ 500GB Seagate FireCuda 530s.
+With 8 data slices, 3 parity slices, and 1 hot spare slice, we should end up with approximately 110 TB of usable space.
+
 ### The CPU
 We're going to make an executive decision and go with an AMD EPYC CPU, because we've always wanted to use one.
 That said, we have a few options:
 
-| Model | Generation | RRP (USD) | Cores (threads) | Clock (GHz) | L3 Cache (MB) | TDP (W) |
-| ----- |:----------:|:---------:|:---------------:|:-----------:|:-------------:|:-------:|
-| 7272  |    Rome    |    625    |     12 (24)     |  2.9 - 3.2  |      64       |   120   |
-| 7302  |    Rome    |    978    |     16 (32)     |  3.0 - 3.3  |      128      |   155   |
-| 7352  |    Rome    |   1350    |     24 (48)     |  2.3 - 3.2  |      128      |   155   |
-| 7402  |    Rome    |   1783    |     24 (48)     | 2.8 - 3.35  |      128      |   180   |
-| 7F72  |    Rome    |   2450    |     24 (48)     |  3.5 - 3.9  |      192      |   240   |
-| 7452  |    Rome    |   2025    |     32 (64)     | 2.35 - 3.35 |      128      |   155   |
-| 7453  |   Milan    |   1570    |     28 (56)     | 2.75 - 3.45 |      64       |   225   |
-| 7413  |   Milan    |   1825    |     24 (48)     | 2.85 - 4.00 |      128      |   200   |
-| 7513  |   Milan    |   2840    |     32 (64)     | 2.6 - 3.65  |      128      |   200   |
+| Model    | Generation | RRP (USD) | Cores (threads) |  Clock (GHz)  | L3 Cache (MB) | TDP (W) |
+| -------- |:----------:|:---------:|:---------------:|:-------------:|:-------------:|:-------:|
+| 7272     |    Rome    |    625    |     12 (24)     |   2.9 - 3.2   |      64       |   120   |
+| 7302     |    Rome    |    978    |     16 (32)     |   3.0 - 3.3   |      128      |   155   |
+| **7352** |  **Rome**  | **1350**  |   **24 (48)**   | **2.3 - 3.2** |    **128**    | **155** | 
+| 7402     |    Rome    |   1783    |     24 (48)     |  2.8 - 3.35   |      128      |   180   |
+| 7F72     |    Rome    |   2450    |     24 (48)     |   3.5 - 3.9   |      192      |   240   |
+| 7452     |    Rome    |   2025    |     32 (64)     |  2.35 - 3.35  |      128      |   155   |
+| 7453     |   Milan    |   1570    |     28 (56)     |  2.75 - 3.45  |      64       |   225   |
+| 7413     |   Milan    |   1825    |     24 (48)     |  2.85 - 4.00  |      128      |   200   |
+| 7513     |   Milan    |   2840    |     32 (64)     |  2.6 - 3.65   |      128      |   200   |
 
 The odd one out here is the `7F72`, which is a frequency-optimised model, designed for maximum performance per core,
 to get around per-core licensing issues in enterprise applications. While cool, it being nearly double the price
@@ -202,24 +206,23 @@ Since we're expecting mixed workloads (from friends), we'll follow the same guid
 so we'll need at least 4 ✕ 48 = 192GB. With 8 slots on the mobo,
 that means we'll have to use 32GB modules (or 64GB modules if we feel like going overboard).
 
-Our motherboard comes with 8 RAM slots and the Rome Epyc CPUs support octo-channel RAM, so we'd get
+Our motherboard comes with 8 RAM slots and the Rome EPYC CPUs support octo-channel RAM, so we'd get
 the best performance from fully populating the RAM slots.
 
 This however makes upgrading painful, so we're going to go with 4 ✕ 32GB @ 2400MHz for 128GB total for now, which sets
 us back ~1000 AUD.
 
 ## The Damage
-All up, we've spent:
-|      Part      |   Cost (AUD)    | Running Total (AUD) |
-|:--------------:|:---------------:|:-------------------:|
-| 3U Server Case |      FREE!      |          0          |
-|      PSU       |      FREE!      |          0          |
-|      CPU       |      1500       |        1500         |
-|      RAM       |      1000       |        2500         |
-|  Mass Storage  | 12 ✕ 400 = 4800 |        7300         |
-| ZIL/L2ARC SSDs |  2 ✕ 300 = 600  |        7900         |
-|  Motherboard   |      1100       |        9000         |
-|                |                 |                     |
+All up, we've settled on:
+|   Component    |                    Selected Part                     |   Cost (AUD)    | Running Total (AUD) |
+|:--------------:|:----------------------------------------------------:|:---------------:|:-------------------:|
+| 3U Server Case |                   Who Even Knows?                    |      FREE!      |          0          |
+|      PSU       |   SilverStone 750W Platinum <br /> (SST-SX750-PT)    |      FREE!      |          0          |
+|      CPU       |      AMD EPYC 7352 <br /> (24 core / 48 thread)      |      1500       |        1500         |
+|      RAM       |      4 ✕ 32GB@2400MHz <br /> (M393A4K40CB1-CRC)      | 4 ✕ 250 = 1000  |        2500         |
+|  Mass Storage  |    12 ✕ 16TB Seagate Exos <br /> (1ST16000NM001G)    | 12 ✕ 400 = 4800 |        7300         |
+| ZIL/L2ARC SSDs | 2 ✕ 500GB Seagate FireCuda 530 <br /> (ZP500GM3A013) |  2 ✕ 300 = 600  |        7900         |
+|  Motherboard   |                AsRock Rack ROMED8U-2T                |      1100       |        9000         |
 
 So just shy of 10,000 AUD. It's a hefty price tag, but worth it in our opinion.
 
