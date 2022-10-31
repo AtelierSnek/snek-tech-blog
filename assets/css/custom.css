@@ -1,3 +1,8 @@
+/* Max Content Width */
+.max-w-prose {
+    max-width: 75ch;
+}
+
 .prose {
   --tw-prose-code: rgba(var(--color-secondary-600),1);
   --tw-prose-invert-code: rgba(var(--color-secondary-400),1);
