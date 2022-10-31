@@ -37,7 +37,7 @@ After deliberating on it for a while, we decided on the following:
 | Motherboard | Must support large amounts of RAM and have BMC/IPMI         |
 | RAM         | Moderate speed, 128GB to start, more to be added            |
 | Storage     | At least 32 TB usable, 2 redundant disks min., 1 hot spare  |
-| Networking  | Min. 2 ✕ 1Gbps outbound, 2 ✕ 10Gbps internal                |
+| Networking  | Min. 2 ✕ 1Gbps management, 2 ✕ 40Gbps data                  |
 
 ### But Why?
 
@@ -120,11 +120,11 @@ for resilience reasons, so we'll do that too. We'll want something with relative
 good random IO speeds.
 In theory, we could go hog wild and get Intel Optane and never worry about it again, but that's...
 prohibitively expensive to put it lightly.
-Again, balancing cose and performance, 2 ✕ 500GB Seagate FireCuda 530s does the job well. Relatively high endurance,
+Again, balancing cost and performance, 2 ✕ 500GB Seagate FireCuda 530s does the job well. Relatively high endurance,
 good random IO performance, and not too expensive. Two of these sets us back 600 AUD.
 
 ### The CPU
-We're going to make an executive decision and go with an AMD Epyc CPU, because we've always wanted to use one.
+We're going to make an executive decision and go with an AMD EPYC CPU, because we've always wanted to use one.
 That said, we have a few options:
 
 | Model | Generation | RRP (USD) | Cores (threads) | Clock (GHz) | L3 Cache (MB) | TDP (W) |
@@ -153,16 +153,19 @@ Shipped to a friend, this sets us back ~1500 AUD.
 
 With our CPU chosen, we need a motherboard that fulfills our purposes.
 Of the options, we are looking for something with an
-IPMI/BMC, and dual Ethernet interfaces onboard, as our 40GbE port requirement can be fulfilled by a PCIe network card.
+IPMI/BMC, and dual Ethernet interfaces onboard, as our data port requirement can be fulfilled by a PCIe network card.
 
 8 SATA ports under one SATA controller would be nice, as it makes configuring passthrough for ZFS easier, but is not
 essential.
 
-The AsRock Rack ROMED8U-2T serves our purposes perfectly:
+The `AsRock Rack ROMED8U-2T` serves our purposes perfectly:
  - [X] 8 ✕ DIMM slots
  - [X] 11 ✕ SATA (2 ✕ mini-SAS)
  - [X] Some amount of PCIe Slots (3)
  - [X] 2 ✕ 10GbE + 1 ✕ IPMI
+
+We don't *need* 10GbE for our management network, but this allows us to build this out with 2 ✕ 10GbE for data, and
+upgrading to 2 ✕ 40GbE later, which may be what we end up doing.
 
 New from Newegg, this sets us back ~1100 AUD.
 
