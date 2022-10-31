@@ -54,3 +54,14 @@
 .prose .chroma {
   background-color: rgba(var(--color-neutral-100),var(--tw-bg-opacity));
 }
+
+/* CheckBoxes and Radio Buttons */
+[type=checkbox], [type=radio] {
+  color: rgba(var(--color-secondary-500),var(--tw-text-opacity));
+}
+
+/* Make transitions slightly longer for aesthetic */
+body a, body button {
+  transition-duration: 250ms;
+}
+

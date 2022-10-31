@@ -171,10 +171,10 @@ IPMI/BMC, and dual Ethernet interfaces onboard, as our data port requirement can
 essential.
 
 The `AsRock Rack ROMED8U-2T` serves our purposes perfectly:
- - [X] 8 ✕ DIMM slots
- - [X] 11 ✕ SATA (2 ✕ mini-SAS)
- - [X] Some amount of PCIe Slots (3)
- - [X] 2 ✕ 10GbE + 1 ✕ IPMI
+ - [X] &nbsp;&nbsp;8 ✕ DIMM slots
+ - [X] &nbsp;&nbsp;8 ✕ SATA (2 ✕ mini-SAS)
+ - [X] &nbsp;&nbsp;Some amount of PCIe Slots (3)
+ - [X] &nbsp;&nbsp;2 ✕ 10GbE + 1 ✕ IPMI
 
 We don't *need* 10GbE for our management network, but this allows us to build this out with 2 ✕ 10GbE for data, and
 upgrading to 2 ✕ 40GbE later, which may be what we end up doing.
