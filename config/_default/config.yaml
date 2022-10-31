@@ -19,4 +19,5 @@ outputs:
     - HTML
     - RSS
     - JSON
-
+taxonomies:
+  series: "series"
