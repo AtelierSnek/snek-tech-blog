@@ -4,6 +4,9 @@ date: 2022-10-31T17:00:00+11:00
 draft: false
 showSummary: true
 summary: "We've wanted to build a home lab for a long time. Here's how it went."
+series:
+  - "Home Server Build-Out"
+series_order: 1
 ---
 
 # Part One: Specification
@@ -11,6 +14,7 @@ summary: "We've wanted to build a home lab for a long time. Here's how it went."
 ## Background
 
 We've wanted to build a home lab for a long, long time, but never got around to it.
+
 **(Selene)** However, a certain someone was complaining about disaster recovery and migrating workloads to us,
 and that turned out to be just the push we needed to get this rolling.
 
@@ -127,6 +131,10 @@ good random IO performance, and not too expensive. Two of these sets us back 600
 Our final storage array consists of 12 ✕ 16 TB Seagate Exos Drives, and 2 ✕ 500GB Seagate FireCuda 530s.
 With 8 data slices, 3 parity slices, and 1 hot spare slice, we should end up with approximately 110 TB of usable space.
 
+{{< alert >}}
+**(Ashe)** It is worth mentioning here that dRAID does not allow for variable stripe width due to how sequential
+resilvering works, so compression ratios and real vs on-disk utilisation may suffer.
+{{< /alert >}}
 ### The CPU
 We're going to make an executive decision and go with an AMD EPYC CPU, because we've always wanted to use one.
 That said, we have a few options:
