@@ -29,7 +29,7 @@
   <link rel="canonical" href="{{ .Permalink }}" />
   {{ range .AlternativeOutputFormats -}}
   {{ printf `
-  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink ($.Site.Title | emojify) |
+  <link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type (.RelPermalink | absURL) ($.Site.Title | emojify) |
   safeHTML }}
   {{ end -}}
   {{/* Asset bundles */}}
