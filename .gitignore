@@ -17,4 +17,4 @@ hugo.linux
 
 #Ignore Obsidian
 /.obsidian
-*/.obsidian
+**/.obsidian
