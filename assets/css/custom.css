@@ -72,7 +72,8 @@ body a, body button {
 }
 
 .tooltip .tooltiptext {
-  width: 20ch;
+  min-width: 16ch;
+  max-width: 40ch;
   bottom: 95%;
   left: 0;
   padding: 0.25ch;
