@@ -142,7 +142,7 @@ resilvering works, so compression ratios and real vs on-disk utilisation may suf
 We're going to make an executive decision and go with an AMD EPYC CPU, because we've always wanted to use one.
 That said, we have a few options:
 
-| Model    | Generation | RRP (USD) | Cores (threads) |  Clock (GHz)  | L3 Cache (MB) | TDP (W) |
+| Model    | Generation | {{< hover "Recommended Retail Price" >}}RRP{{< /hover >}} (USD) | Cores (threads) |  Clock (GHz)  | L3 Cache (MB) | TDP (W) |
 | -------- |:----------:|:---------:|:---------------:|:-------------:|:-------------:|:-------:|
 | 7272     |    Rome    |    625    |     12 (24)     |   2.9 - 3.2   |      64       |   120   |
 | 7302     |    Rome    |    978    |     16 (32)     |   3.0 - 3.3   |      128      |   155   |
