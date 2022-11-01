@@ -9,8 +9,8 @@ colorScheme: rin
 defaultAppearance: dark # valid options: light or dark
 
 mainSections:
-  - section1
-  - section2
+  - blog
+  - tags
 robots: ''
 
 autoSwitchAppearance: true
@@ -46,7 +46,7 @@ article:
   invertPagination: false
   showReadingTime: true
   showTableOfContents: true
-  showTaxonomies: false
+  showTaxonomies: true
   showWordCount: true
   showSummary: true
   sharingLinks: false

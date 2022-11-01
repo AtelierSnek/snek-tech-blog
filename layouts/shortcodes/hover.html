@@ -1,0 +1,9 @@
+{{ if .IsNamedParams }}
+  <div class="tooltip">{{ .Inner }}
+    <span class="tooltiptext">{{ .Get "hover-text" }}</span>
+  </div>
+{{ else }}
+  <div class="tooltip">{{ .Inner }}
+    <span class="tooltiptext">{{ .Get 0 }}</span>
+  </div>
+{{ end }}

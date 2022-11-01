@@ -14,12 +14,9 @@ main:
   - name: Blog
     pageRef: posts
     weight: 10
-  - name: Categories
-    pageRef: categories
-    weight: 20
   - name: Tags
     pageRef: tags
-    weight: 30
+    weight: 20
 
 
 # -- Footer Menu --
@@ -30,6 +27,6 @@ footer:
   - name: Source Code
     url: "https://github.com/AtelierSnek/snek-tech-blog"
     weight: 10
-  - name: Categories
-    pageRef: categories
+  - name: Pay Transparency
+    pageRef: pay-transparency
     weight: 20

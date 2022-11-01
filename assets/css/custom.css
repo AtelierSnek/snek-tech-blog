@@ -1,6 +1,6 @@
 /* Max Content Width */
 .max-w-prose {
-    max-width: 75ch;
+    max-width: 80ch;
 }
 
 .prose {
@@ -65,3 +65,41 @@ body a, body button {
   transition-duration: 250ms;
 }
 
+.tooltip {
+  position:  relative;
+  display: inline-block;
+  border-bottom: 2px dotted rgba(var(--color-secondary-700), var(--tw-text-opacity));
+}
+
+.tooltip .tooltiptext {
+  width: 20ch;
+  bottom: 95%;
+  left: 0;
+  padding: 0.25ch;
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  background-color: rgba(var(--color-neutral-100),0.75);
+  color: rgba(var(--color-secondary-700),0.75);
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* TODO make background blur work*/
+.tooltip:hover .tooltiptext {
+  opacity: 0.95;
+  backdrop-filter: blur(100px);
+}
+
+.dark .tooltip {
+  border-bottom: 2px dotted rgba(var(--color-secondary-400), var(--tw-text-opacity));
+}
+
+.dark .tooltip  .tooltiptext {
+  background-color: rgba(var(--color-neutral-800),var(--tw-bg-opacity));
+  color: rgba(var(--color-secondary-400),var(--tw-text-opacity));
+}
