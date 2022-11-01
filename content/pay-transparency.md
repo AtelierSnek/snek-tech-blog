@@ -2,7 +2,8 @@
 title: "Pay Transparency"
 date: 2022-11-01T11:11:29+11:00
 draft: false
-showWords: false
+summary: "This page lists every job we have ever held in tech, inspired by Xe’s salary transparency page."
+showSummary: true
 ---
 
 # Salary/Pay Transparency
@@ -18,9 +19,9 @@ We do our best to ensure that this information is up-to-date and accurate.
 | Position                             | Start Date  | End Date    | Salary      | Benefits         | How we left     |
 | ------------------------------------ | ----------- | ----------- | ----------- | ---------------- | --------------- |
 | Network Engineer                     | 10-Mar-2017 | 08-May-2017 | 120 AUD/hr  | None - Contract  | Quit            |
-| Network Engineer                     | 10-May-2017 | 07-Aug-2021 | 80,000 AUD  | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}} for CRs     | Quit            |
-| Senior Infrastructure Technical Lead | 08-Aug-2021 | 05-Aug-2022 | 100 AUD/hr  | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}} for On-Call | Hired Full-Time |
-| Senior Infrastructure Technical Lead | 15-Aug-2022 | N/A         | 140,000 AUD | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}} for On-Call | N/A                |
+| Network Engineer                     | 10-May-2017 | 07-Aug-2021 | 80,000 AUD  | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}}for CRs     | Quit            |
+| Senior Infrastructure Technical Lead | 08-Aug-2021 | 05-Aug-2022 | 100 AUD/hr  | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}}for On-Call | Hired Full-Time |
+| Senior Infrastructure Technical Lead | 15-Aug-2022 | N/A         | 140,000 AUD | {{< hover "Time Off In Lieu" >}}TOIL{{< /hover >}}for On-Call | N/A                |
 
 ## Updates
 This page is typically updated whenever we:
